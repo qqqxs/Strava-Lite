@@ -5,7 +5,7 @@ users = {}
 
 create_user_parser = (reqparse.RequestParser()
                       .add_argument("name", type=str, required=True, help="Name is required and must be a string.")
-                      .add_argument("age", type=int, required=True, help="Age is required and must be an integer."))
+                      .add_argument("age", type=int, required=False, help="Age is required and must be an integer."))
 
 
 # Register User
