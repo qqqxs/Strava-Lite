@@ -1,8 +1,6 @@
 # Strava Lite
 Author: Xiaoyu Sun
-
 Email: xsun43@stevens.edu
-
 Github repository link: https://github.com/qqqxs/Strava-Lite
 
 ## Introduction
@@ -38,18 +36,18 @@ Registers a new user in the system.
 - **Request Body**:
     ```json
     {
-      @required
       "name": "string",
-
-      "age": int
+      "age": 0
     }
     ```
+    - **`name`**: Required, string.
+    - **`age`**: Optional, integer.
 - **Response**:
     ```json
     {
       "id": "string",
       "name": "string",
-      "age": int
+      "age": 0
     }
     ```
   - `id` is a UUID generated on behalf of the user.
@@ -65,7 +63,7 @@ Retrieves a user's details by their unique ID.
     {
       "id": "string",
       "name": "string",
-      "age": int
+      "age": 0
     }
     ```
 
@@ -90,7 +88,7 @@ Lists all registered users.
         {
           "id": "string",
           "name": "string",
-          "age": int
+          "age": 0
         }
       ]
     }
@@ -104,13 +102,8 @@ Adds a workout for a user.
 - **Request Body**:
     ```json
     {
-      @required
       "date": "string",
-
-      @required
       "time": "string",
-
-      @required
       "distance": "string"
     }
     ```
@@ -122,6 +115,9 @@ Adds a workout for a user.
       "distance": "string"
     }
     ```
+    - **`date`**: Required, string.
+    - **`time`**: Required, string.
+    - **`distance`**: Required, string.
 
 ### 6. **ListWorkouts**
 Lists all workouts for a specific user.
@@ -150,11 +146,10 @@ Allows users to follow other users.
 - **Request Body**:
     ```json
     {
-      @required
       "follow_id": "string"
     }
     ```
-  - `follow_id` is the ID of the user to follow.
+  - **`follow_id`**: Required, string, which is the ID of the user to follow.
 - **Response**:
     ```json
     {
