@@ -1,6 +1,8 @@
 # Strava Lite
 Author: Xiaoyu Sun
+
 Email: xsun43@stevens.edu
+
 Github repository link: https://github.com/qqqxs/Strava-Lite
 
 ## Introduction
