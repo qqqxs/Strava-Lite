@@ -199,20 +199,30 @@ The following versions were used for environment setup in this project:
 
 ## Setup and Execution
 
-1. **Clone the repository**:
+1. **Clone the repository**
+
    Clone the project repository and navigate to the project directory:
    ```bash
    git clone https://github.com/qqqxs/Strava-Lite.git
    cd Strava-Lite
    ```
+   
+3. **Install the required dependencies**
 
-2. **Start the server**
+   Download all the required packages:
+   ```bash
+   pip install -r requirements.txt
+   ```
+
+4. **Start the server**
+
    Run the app.py file to activate the server:
    ```bash
    python app.py
    ```
 
-3. **Make requests to the server**
+6. **Make requests to the server**
+
    You can use tools like Postman, curl, or even browser-based tools for GET requests. Below are some examples using curl to interact with the APIs.
 - Register a new user
    ```bash
