@@ -62,9 +62,8 @@ class ListUsers(Resource):
 
 add_workout_parser = (reqparse.RequestParser()
                       .add_argument("date", type=str, required=True, help="Date is required and must be a string.")
-                      .add_argument("time", type=str, required=True, help="Time is required and must be a string.")
-                      .add_argument("distance", type=str, required=True,
-                                    help="Distance is required and must be a string."))
+                      .add_argument("distance", type=str, required=True, help="Distance is required and must be a string.")
+                      .add_argument("time", type=str, required=True, help="Time is required and must be a string."))
 
 
 # Add Workout
@@ -79,7 +78,7 @@ class AddWorkout(Resource):
         if user is None:
             return {"message": "No user found"}, 404
 
-        workout = {"date": date, "time": time, "distance": distance}
+        workout = {"date": date, "distance": distance, "time": time}
         user["workouts"].append(workout)
 
         return workout, 200
