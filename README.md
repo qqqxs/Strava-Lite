@@ -252,9 +252,3 @@ The following versions were used for environment setup in this project:
    ```bash
    python test.py
    ```
-
-## Bugs and Issues
-When implementing each API, it is essential to ensure that the output format strictly adheres to the specified requirements. Special attention should be given to handling cases where required parameters are missing, which should result in an appropriate error response. Additionally, while implementing the follower list, consideration must be given to whether the `set` data type is iterable.
-
-## Resolved Issues
-The output format was repeatedly refined to match the specified requirements, such as for `workout` and `user` responses. Furthermore, `try-except` blocks were added to handle scenarios where required parameters are not provided, ensuring the API returns an appropriate error. Finally, the follower list was converted from a `set` to a `list` to meet the iteration requirements.
